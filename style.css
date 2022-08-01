@@ -1,0 +1,51 @@
+.logger-section {
+	font-family: monospace;
+	background-color: rgb(43 43 43);
+	color: white;
+	padding: 30px;
+	min-height: 80vh;
+	border-radius: 3px;
+}
+.logger-section::after {
+	content: "_";
+	display: block;
+	margin-top: 20px;
+	animation: blink-animation 1s steps(5, start) infinite;
+	-webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+.logger-section .log-entry::before {
+	content: ">> ";
+	
+}
+.logger-section .log-entry {
+	margin: 20px 0px;
+	display: flex;
+	flex-wrap: wrap;
+	text-shadow: none;
+	background: #2d2d2d;
+	padding: 20px 0px;
+
+}
+.controls {
+	display: flex;
+}
+.clear-log {
+	border-radius: 2px;
+	background-color: white;
+	border: none;
+	outline: none;
+	padding: 0.5rem 0.75rem;
+
+}
+
+@keyframes blink-animation {
+	to {
+		visibility: hidden;
+	}
+}
+@-webkit-keyframes blink-animation {
+	to {
+		visibility: hidden;
+	}
+}
